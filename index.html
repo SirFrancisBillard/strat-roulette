@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="roulette.js"></script>
+		<style>
+		button {
+			background-color: #00ffd8;
+			border: none;
+			color: #0099ff;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			font-family: 'Roboto', sans-serif;
+		}
+		body {
+			background-image: url("bg.jpg");
+			background-size: auto;
+		}
+		h1, h3 {
+			color: #0099ff;
+		}
+		h1, h3, p, form {
+			font-family: 'Roboto', sans-serif;
+		}
+		#bg {
+			position: fixed;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+		}
+		#bg img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			min-width: 50%;
+			min-height: 50%;
+		}
+		#page-wrap {
+			position: relative;
+			width: 400px;
+			margin: 50px auto;
+			padding: 20px;
+			background: #ccffff;
+			box-shadow: 0 0 40px black;
+			border-radius: 25px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="bg">
+			<img src="bg.jpg" alt="">
+		</div>
+		<center>
+			<div id="page-wrap">
+				<h1>Strat Roulette</h1>
+				<p>Yet another strat roulette site for siege. Oh boy!</p>
+				<br>
+				<form id="sr_form" name="roulette">
+					<br>
+					<input type="radio" name="team" value="atk" checked> Attack<br>
+					<input type="radio" name="team" value="def"> Defend<br>
+					<br>
+					<input type="radio" name="mode" value="bomb" checked> Bomb<br>
+					<input type="radio" name="mode" value="hostage"> Hostage<br>
+					<br>
+					<input type="checkbox" name="generic" value="include_generic" checked> Include generic strats<br>
+					<br>
+					<input type="checkbox" name="furfaces" value="furry_faces"> Add furry faces >_<<br>
+				</form>
+				<br>
+				<button onclick="getStrat()">GET STRAT</button>
+				<br><br>
+				<h3 id="strat_title">title</h3>
+				<p id="strat_desc">desc</p>
+			</div>
+		</center>
+	</body>
+</html>
