@@ -1,2 +1,2 @@
-# strat-roulette
-a strat roulette site for R6 siege
+# Wrong Branch
+Check out gh-pages for the actual code
